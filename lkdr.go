@@ -78,6 +78,8 @@ func (e *Error) Unwrap() error {
 	return e.Err
 }
 
+var ErrorFromAPI = errors.New("received an error in the response from the API")
+
 type User struct {
 	Number        uint
 	Code          uint
@@ -129,7 +131,7 @@ func (u *User) RequestSMS() error {
 			Code:           e.Code,
 			Message:        e.Message,
 			AdditionalInfo: e.AdditionalInfo,
-			Err:            nil,
+			Err:            ErrorFromAPI,
 		}
 	}
 
@@ -181,7 +183,7 @@ func (u *User) SetCodeFromSMS(code int) error {
 			Code:           e.Code,
 			Message:        e.Message,
 			AdditionalInfo: e.AdditionalInfo,
-			Err:            errors.New("received an error in the response from the API"),
+			Err:            ErrorFromAPI,
 		}
 	}
 
