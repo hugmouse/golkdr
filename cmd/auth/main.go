@@ -4,8 +4,8 @@ import (
 	"bufio"
 	"encoding/json"
 	"fmt"
+	"golkdr"
 	"io/ioutil"
-	"lkdr"
 	"log"
 	"os"
 	"strconv"
@@ -27,7 +27,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	u := lkdr.NewUser(uint(number))
+	u := golkdr.NewUser(uint(number))
 	err = u.RequestSMS()
 	if err != nil {
 		log.Fatal(err)

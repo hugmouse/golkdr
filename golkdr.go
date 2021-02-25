@@ -1,11 +1,11 @@
-package lkdr
+package golkdr
 
 import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"golkdr/consts"
 	"io/ioutil"
-	"lkdr/consts"
 	"log"
 	"net/http"
 	"strconv"
