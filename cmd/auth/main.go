@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"encoding/json"
 	"fmt"
-	"golkdr"
+	"github.com/hugmouse/golkdr"
 	"io/ioutil"
 	"log"
 	"os"

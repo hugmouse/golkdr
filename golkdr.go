@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"golkdr/consts"
+	"github.com/hugmouse/golkdr/consts"
 	"io/ioutil"
 	"log"
 	"net/http"
